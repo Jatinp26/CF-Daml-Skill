@@ -10,7 +10,7 @@ The skill is particularly good at catching the mistakes that aren't syntax error
 
 ## Installation
 
-1. Download `daml-skill.skill`
+1. Download `CF-daml-skill.skill`
 2. In Claude.ai, go to **Settings → Skills**
 3. Upload the `.skill` file
 4. Start a new conversation, the skill is now active
@@ -18,8 +18,9 @@ The skill is particularly good at catching the mistakes that aren't syntax error
 ## What's inside
 
 ```
-daml-skill/
+CF-Daml-Skill/
 ├── SKILL.md                   
+├── CF-daml-skill.skill                   
 └── references/
     ├── language.md           
     ├── patterns.md            
