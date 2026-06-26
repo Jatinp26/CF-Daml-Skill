@@ -6,40 +6,12 @@ A Claude skill that gives any Claude/ Claude Code conversation correct knowledge
 
 When you ask Claude about Daml templates, choices, authorization errors, multiparty workflows, testing with Daml Script, SDK setup, Canton 3.5 changes, the skill loads automatically and guides Claude to give correct, grounded answers rather than plausible-sounding guesses.
 
-The skill is particularly good at catching the mistakes that aren't syntax errors but cause runtime authorization failures or incorrect ledger behavior, the things a compiler won't catch.
-
 ## Installation
 
 1. Download `CF-daml-skill.skill`
 2. In Claude.ai, go to **Settings → Skills**
 3. Upload the `.skill` file
 4. Start a new conversation, the skill is now active
-
-## What's inside
-
-```
-CF-Daml-Skill/
-├── SKILL.md                   
-├── CF-daml-skill.skill                   
-└── references/
-    ├── language.md           
-    ├── patterns.md            
-    └── canton35.md           
-```
-
-**`SKILL.md`** loads on every relevant question. It covers:
-
-- Core principles Claude must apply (authorization chain tracing, signatory vs observer vs controller, consuming vs non-consuming, etc.)
-- A table of the most common Daml mistakes with correct alternatives
-- `daml.yaml` quick reference for Canton 3.5
-- `dpm` command cheat sheet
-- A code review checklist for when someone pastes a file to review
-
-**`references/language.md`** covers the full language: native types, records, variants, Optional, functions, control flow, templates, the authorization model (formal), choice anatomy, `createCmd` vs `create`, Daml Script testing API, interfaces, contract keys, and the standard library.
-
-**`references/patterns.md`** covers 7 canonical Canton patterns with working code skeletons: Propose-Accept, Delegation, Authorization token, Locking, Multiple party agreement, Transfer proposal (3-party/issuer-controlled), and Observable event. Includes a pattern selection guide and notes on composing patterns.
-
-**`references/canton35.md`** covers Canton 3.5 specifics: the `daml` > `dpm` CLI migration, Protocol Version 34 vs 35 differences, Daml-LF 2.3 and contract keys, breaking API changes (package-name addressing, scope based JWT deprecation), `daml.yaml` configuration, multi-package project structure, and common migration failures.
 
 ## What it's good at
 
@@ -82,9 +54,5 @@ The skill activates on questions about:
 - Contract keys, interfaces, data types
 - Canton 3.5 / SDK 3.5 migration
 - Translating Ethereum/Solidity patterns to Daml
-
-## SDK version
-
-Built against **Canton 3.5.3 / SDK 3.5.x**. Covers Daml-LF 2.2 (default) and 2.3 (with `--target=2.3`). References Protocol Version 34 and 35.
 
 > ***Developed by Canton Foundation DevRel***
